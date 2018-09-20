@@ -103,7 +103,7 @@ var DropdownMenu = function (_PureComponent) {
         return;
       }
 
-      var menuItems = _reactDom2.default.findDOMNode(this).querySelector('.dd-menu > .dd-menu-items');
+      var menuItems = _reactDom2.default.findDOMNode(this).querySelector('.dd-menu .dd-menu-items');
       if (this.props.isOpen && !prevProps.isOpen) {
         this.lastWindowClickEvent = this.handleClickOutside;
         document.addEventListener('click', this.lastWindowClickEvent);
@@ -154,11 +154,7 @@ var DropdownMenu = function (_PureComponent) {
       var transitionProps = {
         className: 'grow-from-' + (upwards ? 'up-' : '') + (animAlign || align),
         component: 'div',
-        //className: classnames('dd-menu-items', { 'dd-items-upwards': upwards }),
-        onKeyDown: this.handleKeyDown,
-        enter: animate,
-        exit: animate,
-        timeout: { enter: enterTimeout, exit: leaveTimeout }
+        onKeyDown: this.handleKeyDown
       };
 
       return _react2.default.createElement(
@@ -168,10 +164,18 @@ var DropdownMenu = function (_PureComponent) {
         _react2.default.createElement(
           _TransitionGroup2.default,
           transitionProps,
-          this.props.isOpen && _react2.default.createElement(
-            'ul',
-            { key: 'items', className: listClassName },
-            this.props.children
+          _react2.default.createElement(
+            _react2.default.Fragment,
+            null,
+            _react2.default.createElement(
+              'div',
+              { className: (0, _classnames2.default)('dd-menu-items', { 'dd-items-upwards': upwards }) },
+              this.props.isOpen && _react2.default.createElement(
+                'ul',
+                { key: 'items', className: listClassName },
+                this.props.children
+              )
+            )
           )
         )
       );

@@ -83,10 +83,7 @@ export default class NestedDropdownMenu extends PureComponent {
 
     const prefix = upwards ? 'up-' : '';
     const transitionProps = {
-      //className: 'dd-item-ignore',
       className: `grow-from-${prefix}${direction}`,
-      enter: animate,
-      exit: animate,
       timeout: { enter: enterTimeout, exit: leaveTimeout }
     };
 
@@ -94,7 +91,11 @@ export default class NestedDropdownMenu extends PureComponent {
       <li {...itemProps}>
         {toggle}
         <CSSTransitionGroup {...transitionProps}>
-          {isOpen ? <ul key="items">{children}</ul> : null}
+          <React.Fragment>
+            <div className="dd-item-ignore">
+              {isOpen ? <ul key="items">{children}</ul> : null}
+            </div>
+          </React.Fragment>
         </CSSTransitionGroup>
       </li>
     );

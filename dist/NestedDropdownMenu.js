@@ -107,10 +107,7 @@ var NestedDropdownMenu = function (_PureComponent) {
 
       var prefix = upwards ? 'up-' : '';
       var transitionProps = {
-        //className: 'dd-item-ignore',
         className: 'grow-from-' + prefix + direction,
-        enter: animate,
-        exit: animate,
         timeout: { enter: enterTimeout, exit: leaveTimeout }
       };
 
@@ -121,11 +118,19 @@ var NestedDropdownMenu = function (_PureComponent) {
         _react2.default.createElement(
           _TransitionGroup2.default,
           transitionProps,
-          isOpen ? _react2.default.createElement(
-            'ul',
-            { key: 'items' },
-            children
-          ) : null
+          _react2.default.createElement(
+            _react2.default.Fragment,
+            null,
+            _react2.default.createElement(
+              'div',
+              { className: 'dd-item-ignore' },
+              isOpen ? _react2.default.createElement(
+                'ul',
+                { key: 'items' },
+                children
+              ) : null
+            )
+          )
         )
       );
     }

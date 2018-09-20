@@ -55,7 +55,7 @@ export default class DropdownMenu extends PureComponent {
       return;
     }
 
-    const menuItems = ReactDOM.findDOMNode(this).querySelector('.dd-menu > .dd-menu-items');
+    const menuItems = ReactDOM.findDOMNode(this).querySelector('.dd-menu .dd-menu-items');
     if(this.props.isOpen && !prevProps.isOpen) {
       this.lastWindowClickEvent = this.handleClickOutside;
       document.addEventListener('click', this.lastWindowClickEvent);
@@ -144,20 +144,20 @@ export default class DropdownMenu extends PureComponent {
     const transitionProps = {
       className: 'grow-from-' + (upwards ? 'up-' : '') + (animAlign || align),
       component: 'div',
-      //className: classnames('dd-menu-items', { 'dd-items-upwards': upwards }),
       onKeyDown: this.handleKeyDown,
-      enter: animate,
-      exit: animate,
-      timeout: { enter: enterTimeout, exit: leaveTimeout }
     };
 
     return (
       <div className={menuClassName}>
         {this.props.toggle}
         <CSSTransitionGroup {...transitionProps}>
-          {this.props.isOpen &&
-          <ul key="items" className={listClassName}>{this.props.children}</ul>
-          }
+          <React.Fragment>
+            <div className={classnames('dd-menu-items', { 'dd-items-upwards': upwards })}>
+              {this.props.isOpen &&
+              <ul key="items" className={listClassName}>{this.props.children}</ul>
+              }
+            </div>
+          </React.Fragment>
         </CSSTransitionGroup>
       </div>
     );
