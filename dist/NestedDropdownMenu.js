@@ -108,11 +108,10 @@ var NestedDropdownMenu = function (_PureComponent) {
       var prefix = upwards ? 'up-' : '';
       var transitionProps = {
         className: 'dd-item-ignore',
-        transitionEnter: animate,
-        transitionLeave: animate,
-        transitionName: 'grow-from-' + prefix + direction,
-        transitionEnterTimeout: enterTimeout,
-        transitionLeaveTimeout: leaveTimeout
+        classNames: 'grow-from-' + prefix + direction,
+        enter: animate,
+        exit: animate,
+        timeout: { enter: enterTimeout, exit: leaveTimeout }
       };
 
       return _react2.default.createElement(

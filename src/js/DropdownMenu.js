@@ -148,7 +148,7 @@ export default class DropdownMenu extends PureComponent {
       onKeyDown: this.handleKeyDown,
       enter: animate,
       exit: animate,
-      timeout={{ enter: enterTimeout, exit: leaveTimeout }}
+      timeout: { enter: enterTimeout, exit: leaveTimeout }
     };
 
     return (

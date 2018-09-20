@@ -152,14 +152,13 @@ var DropdownMenu = function (_PureComponent) {
 
       var listClassName = 'dd-items-' + (textAlign || align);
       var transitionProps = {
-        transitionName: 'grow-from-' + (upwards ? 'up-' : '') + (animAlign || align),
+        classNames: 'grow-from-' + (upwards ? 'up-' : '') + (animAlign || align),
         component: 'div',
         className: (0, _classnames2.default)('dd-menu-items', { 'dd-items-upwards': upwards }),
         onKeyDown: this.handleKeyDown,
-        transitionEnter: animate,
-        transitionLeave: animate,
-        transitionEnterTimeout: enterTimeout,
-        transitionLeaveTimeout: leaveTimeout
+        enter: animate,
+        exit: animate,
+        timeout: { enter: enterTimeout, exit: leaveTimeout }
       };
 
       return _react2.default.createElement(

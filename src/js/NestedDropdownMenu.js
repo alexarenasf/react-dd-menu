@@ -87,7 +87,7 @@ export default class NestedDropdownMenu extends PureComponent {
       classNames: `grow-from-${prefix}${direction}`,
       enter: animate,
       exit: animate,
-      timeout={{ enter: enterTimeout, exit: leaveTimeout }}
+      timeout: { enter: enterTimeout, exit: leaveTimeout }
     };
 
     return (

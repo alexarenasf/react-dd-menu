@@ -13,7 +13,7 @@
           transform: scale(1);
 }
 
-.grow-from-left-leave {
+.grow-from-left-exit {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transform-origin: 0 0;
@@ -22,7 +22,7 @@
   transition: transform 0.15s ease-out;
   transition: transform 0.15s ease-out, -webkit-transform 0.15s ease-out;
 }
-.grow-from-left-leave.grow-from-left-leave-active {
+.grow-from-left-exit.grow-from-left-exit-active {
   -webkit-transform: scale(0);
           transform: scale(0);
 }
@@ -41,7 +41,7 @@
           transform: scale(1);
 }
 
-.grow-from-right-leave {
+.grow-from-right-exit {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transform-origin: 100% 0;
@@ -50,7 +50,7 @@
   transition: transform 0.15s ease-out;
   transition: transform 0.15s ease-out, -webkit-transform 0.15s ease-out;
 }
-.grow-from-right-leave.grow-from-right-leave-active {
+.grow-from-right-exit.grow-from-right-exit-active {
   -webkit-transform: scale(0);
           transform: scale(0);
 }
@@ -69,7 +69,7 @@
           transform: scale(1);
 }
 
-.grow-from-center-leave {
+.grow-from-center-exit {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transform-origin: 50% 0;
@@ -78,7 +78,7 @@
   transition: transform 0.15s ease-out;
   transition: transform 0.15s ease-out, -webkit-transform 0.15s ease-out;
 }
-.grow-from-center-leave.grow-from-center-leave-active {
+.grow-from-center-exit.grow-from-center-exit-active {
   -webkit-transform: scale(0);
           transform: scale(0);
 }
@@ -97,7 +97,7 @@
           transform: scale(1);
 }
 
-.grow-from-up-left-leave {
+.grow-from-up-left-exit {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transform-origin: 0 100%;
@@ -106,7 +106,7 @@
   transition: transform 0.15s ease-out;
   transition: transform 0.15s ease-out, -webkit-transform 0.15s ease-out;
 }
-.grow-from-up-left-leave.grow-from-up-left-leave-active {
+.grow-from-up-left-exit.grow-from-up-left-exit-active {
   -webkit-transform: scale(0);
           transform: scale(0);
 }
@@ -125,7 +125,7 @@
           transform: scale(1);
 }
 
-.grow-from-up-center-leave {
+.grow-from-up-center-exit {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transform-origin: 50% 100%;
@@ -134,7 +134,7 @@
   transition: transform 0.15s ease-out;
   transition: transform 0.15s ease-out, -webkit-transform 0.15s ease-out;
 }
-.grow-from-up-center-leave.grow-from-up-center-leave-active {
+.grow-from-up-center-exit.grow-from-up-center-exit-active {
   -webkit-transform: scale(0);
           transform: scale(0);
 }
@@ -153,7 +153,7 @@
           transform: scale(1);
 }
 
-.grow-from-up-right-leave {
+.grow-from-up-right-exit {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transform-origin: 100% 100%;
@@ -162,7 +162,7 @@
   transition: transform 0.15s ease-out;
   transition: transform 0.15s ease-out, -webkit-transform 0.15s ease-out;
 }
-.grow-from-up-right-leave.grow-from-up-right-leave-active {
+.grow-from-up-right-exit.grow-from-up-right-exit-active {
   -webkit-transform: scale(0);
           transform: scale(0);
 }
