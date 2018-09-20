@@ -87,7 +87,7 @@ let config = {
 
 if(env.development) {
   const host = 'localhost';
-  const port = 8080;
+  const port = 8081;
   const DEV_URL = `http://${host}:${port}`;
   config.devtool = 'eval';
   config.entry = config.entry.concat([
