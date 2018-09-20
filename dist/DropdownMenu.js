@@ -152,9 +152,9 @@ var DropdownMenu = function (_PureComponent) {
 
       var listClassName = 'dd-items-' + (textAlign || align);
       var transitionProps = {
-        classNames: 'grow-from-' + (upwards ? 'up-' : '') + (animAlign || align),
+        className: 'grow-from-' + (upwards ? 'up-' : '') + (animAlign || align),
         component: 'div',
-        className: (0, _classnames2.default)('dd-menu-items', { 'dd-items-upwards': upwards }),
+        //className: classnames('dd-menu-items', { 'dd-items-upwards': upwards }),
         onKeyDown: this.handleKeyDown,
         enter: animate,
         exit: animate,

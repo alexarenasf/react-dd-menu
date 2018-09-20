@@ -107,8 +107,8 @@ var NestedDropdownMenu = function (_PureComponent) {
 
       var prefix = upwards ? 'up-' : '';
       var transitionProps = {
-        className: 'dd-item-ignore',
-        classNames: 'grow-from-' + prefix + direction,
+        //className: 'dd-item-ignore',
+        className: 'grow-from-' + prefix + direction,
         enter: animate,
         exit: animate,
         timeout: { enter: enterTimeout, exit: leaveTimeout }
