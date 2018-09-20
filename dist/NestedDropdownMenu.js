@@ -18,9 +18,9 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _CSSTransitionGroup = require('react-transition-group/CSSTransitionGroup');
+var _TransitionGroup = require('react-transition-group/TransitionGroup');
 
-var _CSSTransitionGroup2 = _interopRequireDefault(_CSSTransitionGroup);
+var _TransitionGroup2 = _interopRequireDefault(_TransitionGroup);
 
 var _classnames = require('classnames');
 
@@ -120,7 +120,7 @@ var NestedDropdownMenu = function (_PureComponent) {
         itemProps,
         toggle,
         _react2.default.createElement(
-          _CSSTransitionGroup2.default,
+          _TransitionGroup2.default,
           transitionProps,
           isOpen ? _react2.default.createElement(
             'ul',

@@ -18,9 +18,9 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _CSSTransitionGroup = require('react-transition-group/CSSTransitionGroup');
+var _TransitionGroup = require('react-transition-group/TransitionGroup');
 
-var _CSSTransitionGroup2 = _interopRequireDefault(_CSSTransitionGroup);
+var _TransitionGroup2 = _interopRequireDefault(_TransitionGroup);
 
 var _classnames = require('classnames');
 
@@ -167,7 +167,7 @@ var DropdownMenu = function (_PureComponent) {
         { className: menuClassName },
         this.props.toggle,
         _react2.default.createElement(
-          _CSSTransitionGroup2.default,
+          _TransitionGroup2.default,
           transitionProps,
           this.props.isOpen && _react2.default.createElement(
             'ul',

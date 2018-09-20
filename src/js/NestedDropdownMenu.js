@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
-import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import CSSTransitionGroup from 'react-transition-group/TransitionGroup';
 import classnames from 'classnames';
 
 export default class NestedDropdownMenu extends PureComponent {
@@ -84,11 +84,10 @@ export default class NestedDropdownMenu extends PureComponent {
     const prefix = upwards ? 'up-' : '';
     const transitionProps = {
       className: 'dd-item-ignore',
-      transitionEnter: animate,
-      transitionLeave: animate,
-      transitionName: `grow-from-${prefix}${direction}`,
-      transitionEnterTimeout: enterTimeout,
-      transitionLeaveTimeout: leaveTimeout,
+      classNames: `grow-from-${prefix}${direction}`,
+      enter: animate,
+      exit: animate,
+      timeout={{ enter: enterTimeout, exit: leaveTimeout }}
     };
 
     return (
