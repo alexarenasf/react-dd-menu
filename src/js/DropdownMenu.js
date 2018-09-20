@@ -142,9 +142,9 @@ export default class DropdownMenu extends PureComponent {
 
     const listClassName = 'dd-items-' + (textAlign || align);
     const transitionProps = {
-      classNames: 'grow-from-' + (upwards ? 'up-' : '') + (animAlign || align),
+      className: 'grow-from-' + (upwards ? 'up-' : '') + (animAlign || align),
       component: 'div',
-      className: classnames('dd-menu-items', { 'dd-items-upwards': upwards }),
+      //className: classnames('dd-menu-items', { 'dd-items-upwards': upwards }),
       onKeyDown: this.handleKeyDown,
       enter: animate,
       exit: animate,
